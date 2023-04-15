@@ -1,0 +1,76 @@
+:root {
+    --backcolor: grey;
+}
+
+html, body {
+    padding: 0;
+    margin:0;
+}
+
+/*NAVIGATION BAR STYLING*/
+
+li{
+    list-style-type: none;    
+}
+
+a{
+    text-decoration: none;
+    color: purple;
+    font-size: 1.5rem;
+}
+
+a:hover{
+    color: red;
+}
+
+.navbar{
+
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    margin: 0 auto;
+
+}
+
+.navbar .links{
+    padding-right: 2rem;
+    display: flex;
+    float: right;
+    gap: 2rem;
+}
+
+/*ABOUT ME SECTION*/
+
+.container{
+
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--backcolor);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.name{
+
+    width: 100%;
+    height: 100px;
+    padding: 60px;
+    font-size: xxx-large;
+    background-color: rgb(155, 90, 90);
+   
+    
+}
+
+.aboutMe{
+    width: 100%;
+    height: 100px;
+    padding: 60px;
+    font-size: xxx-large;
+    background-color: rgb(155, 90, 90);
+
+}
+    
