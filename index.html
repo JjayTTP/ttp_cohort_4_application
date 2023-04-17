@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/main.css">
         <title>Shawn Sinanan Website</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        
+
     </head>
     <body>
         
@@ -36,7 +39,19 @@
             <div id="aboutMe">
                  About Me
             </div>
-        </div>
+        
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/images/2001.jpg"></div>
+                    <div class="swiper-slide"><img src="/images/enter_dragon.jpg"></div>
+                    <div class="swiper-slide"><img src="/images/goodfellas.jpg"></div>
+                </div>
+        
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>    
+    
 
         <div class="container" id="skillsContainer">
             <div id="skills">
@@ -56,6 +71,18 @@
             Final
         </footer>
  
-    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        
+        const swiper = new Swiper('.swiper', {
+        loop: true,
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        });
+    </script>
     </body>
 </html>
