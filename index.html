@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="styles/main.css">
         <title>Shawn Sinanan Website</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-        
+        <script src="js/script.js"></script>
 
     </head>
     <body>
@@ -40,6 +40,8 @@
                  About Me
             </div>
         
+            
+            <!--
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="/images/2001.jpg"></div>
@@ -50,17 +52,29 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
+            -->
+
         </div>    
     
 
         <div class="container" id="skillsContainer">
-            <div id="skills">
-                Resume
+            <div class="skills">
+                <div class="item item1">Python</div>
+                <div class="item item2">C++</div>
+                <div class="item item3">HTML/CSS</div>
+                <div class="item item4">JavaScript</div>
             </div>
+
+            <div class="portfolio">
+                    <button onclick="ResumeLink()">Resume</button>
+                    <button onclick="GitLink()">Github</button>
+            </div>
+
         </div>
 
        <div class="container" id="contactContainer">
             <div id="contactIcons">
+                <button onclick="LinkedinLink()">Linkedin</button>
             </div>
             <div id="emailbox">
                 <a href="mailto:shawnsinanan21@gmail.com">Click here to send email </a>               
@@ -70,8 +84,10 @@
         <footer class="footer">
             Final
         </footer>
- 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+    
+ <!--
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9.2.3/swiper-bundle.min.js"></script>
     <script>
         
         const swiper = new Swiper('.swiper', {
@@ -84,5 +100,7 @@
 
         });
     </script>
+
+-->
     </body>
 </html>

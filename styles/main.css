@@ -81,7 +81,7 @@ a:hover{
 
 
 
-#name{
+#aboutMe{
 
     width: 50%;
     height: 100px;
@@ -91,7 +91,7 @@ a:hover{
     
 }
 
-#aboutMe{
+#name{
     width: 50%;
     height: 100px;
     padding: 60px;
@@ -99,6 +99,8 @@ a:hover{
     background-color: rgb(155, 90, 90);
 
 }
+
+/*
 
 .swiper{
     width: 185px;
@@ -125,14 +127,36 @@ a:hover{
     color: var(--swiper-navigation-color,var(--swiper-theme-color));
 }
 
-#skills{
-    width: 100%;
+*/
+
+.skills{
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    place-items: center;
+
+
+}
+
+.portfolio{
+
+    width: 25%;
     height: 100px;
-    padding: 60px;
+    padding: 40px;
     font-size: xxx-large;
     background-color: rgb(155, 90, 90);
 
 }
+
+.skills .item{
+    background-color: #ccc;
+    padding: 20px;
+    width: 10rem;
+    height: 10rem;
+}
+
 
 #contactIcons{
     width: 25%;
