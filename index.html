@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="styles/main.css">
         <title>Shawn Sinanan Website</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-        <script src="js/script.js"></script>
+        <script defer src="js/links.js"></script>
 
     </head>
     <body>
@@ -26,17 +26,17 @@
         </header>
 
         <div class="container" id="nameContainer">
-            <div class="card">
+            <div class="hidden" id="card" >
                 <img src="/images/profile.png">
             </div>
 
-            <div id="name">
+            <div class="hidden" id="name" ">
                 Hello I'm Shawn Sinanan
             </div>       
         </div>
 
         <div class="container" id="aboutContainer">
-            <div id="aboutMe">
+            <div class="hidden" id="aboutMe">
                  About Me
             </div>
         
@@ -58,25 +58,29 @@
     
 
         <div class="container" id="skillsContainer">
-            <div class="skills">
+            <div class="hidden" id="skills">
                 <div class="item item1">Python</div>
                 <div class="item item2">C++</div>
                 <div class="item item3">HTML/CSS</div>
                 <div class="item item4">JavaScript</div>
             </div>
 
-            <div class="portfolio">
-                    <button onclick="ResumeLink()">Resume</button>
-                    <button onclick="GitLink()">Github</button>
+            <div class="hidden" id="portfolio">
+                    <div class="linkCard" id="Resume">
+                        yo
+                    </div>
+                    <div class="linkCard" id="Github">
+                        yo
+                    </div>   
             </div>
 
         </div>
 
        <div class="container" id="contactContainer">
-            <div id="contactIcons">
+            <div class="hidden" id="contactIcons">
                 <button onclick="LinkedinLink()">Linkedin</button>
             </div>
-            <div id="emailbox">
+            <div class="hidden" id="emailbox" >
                 <a href="mailto:shawnsinanan21@gmail.com">Click here to send email </a>               
             </div>
         </div>
