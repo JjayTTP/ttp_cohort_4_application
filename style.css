@@ -1,3 +1,4 @@
+/*General CSS*/
 body {
     background: #000000;
     color: #287094;
@@ -11,6 +12,8 @@ body {
     padding: 0;
     box-sizing: border-box;
   }
+
+  /*Header*/
   #header {
     overflow: hidden;
     position: fixed;
@@ -40,6 +43,10 @@ body {
   .navbar {
     padding: 0;
   }
+
+  .navbar a{
+    text-decoration: none;
+  }
   
   .navbar ul {
     margin: 0;
@@ -66,24 +73,18 @@ body {
     transition: 0.3s;
   }
   
-  .navbar a i, .navbar a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-  }
-  
   .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
     color: #287094;
   }
   
-  
-  #main-image {
+  /*Home*/
+  #home {
     background: url("assets/NewYorkAtNight.jpeg") repeat scroll center center/cover;
     height: 100vh;
     width: 100%;
   }
   
-  #main-image .-content {
+  #home .content {
     height: 100vh;
     text-align: left;
     width: 100%;
@@ -92,36 +93,32 @@ body {
     flex-direction: column;
   }
   
-  .image-content h1 {
-    font-size: 40px;
+  .content h1 {
+    font-size: 25px;
     font-weight: 700;
     margin-bottom: 10px;
+    margin-left: 40px;
     text-transform: uppercase;
     color: #fff;
   }
   
-  .image-content p {
-    font-size: 13px;
-    letter-spacing: 3px;
-    margin-top: 0;
-    margin-bottom: 30px;
-    text-transform: capitalize;
-    color: #fff;
-    font-weight: 500;
+  ul.list-social{
+    list-style-type: none;
+    color: #ffff;
   }
-  
-  .image-content .list-social li {
+
+  ul.list-social li {
     float: left;
-    margin-right: 20px;
+    margin-right: 25px;
   }
   
-  .image-content .list-social li i {
-    color: #fff;
-    font-size: 15px;
+  ul.list-social li a img.icon {
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
   }
-
   
-
+  /*About*/
   #about {
     width: 100%;
     height: auto;
