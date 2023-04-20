@@ -12,27 +12,15 @@ body {
     box-sizing: border-box;
   }
   #header {
+    overflow: hidden;
+    position: fixed;
+    top: -70px;
+    width: 100%;
     transition: all 0.5s;
     z-index: 997;
     padding: 15px 0;
     background-color: rgb(0, 0, 0);
-    top: -100%;
     box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.08);
-  }
-  
-  #header.header-scrolled, #header.header-inner-pages {
-    top: 0;
-  }
-  
-  #header .logo {
-    font-size: 30px;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-family: "Playfair Display", sans-serif;
-    font-style: italic;
   }
   
   #header .logo a {
@@ -41,7 +29,53 @@ body {
   
   #header .logo img {
     max-height: 40px;
+    float: left;
+    padding-left: 10px;
   }
+
+  #header ul{
+    float: right;
+  }
+
+  .navbar {
+    padding: 0;
+  }
+  
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar li {
+    position: relative;
+  }
+  
+  .navbar a, .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px 10px 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #5f5f5f;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+  
+  .navbar a i, .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+  
+  .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+    color: #287094;
+  }
+  
   
   #main-image {
     background: url("assets/NewYorkAtNight.jpeg") repeat scroll center center/cover;
@@ -86,92 +120,41 @@ body {
     font-size: 15px;
   }
 
-  .navbar {
-    padding: 0;
+  
+
+  #about {
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    padding-top: 120px;
   }
   
-  .navbar ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    align-items: center;
+  #about .div-img-bg {
+    padding-bottom: 30px;
+    border: 20px solid #000000;
   }
   
-  .navbar li {
-    position: relative;
+  #about .div-img-bg .about-img img {
+    width: 100%;
+    box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+    margin-top: -60px;
+    margin-left: 40px;
+    height: 400px;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
   
-  .navbar a, .navbar a:focus {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0 10px 30px;
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: #5f5f5f;
-    white-space: nowrap;
-    transition: 0.3s;
+  #about .about-descr .p-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    text-align: left;
   }
   
-  .navbar a i, .navbar a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
+  #about .about-descr .separator {
+    max-width: 80%;
+    margin-bottom: 0;
+    text-align: left;
   }
+
   
-  .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-    color: #287094;
-  }
   
-  .navbar .dropdown ul {
-    display: block;
-    position: absolute;
-    left: 30px;
-    top: calc(100% + 30px);
-    margin: 0;
-    padding: 10px 0;
-    z-index: 99;
-    opacity: 0;
-    visibility: hidden;
-    background: #fff;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-    transition: 0.3s;
-  }
-  
-  .navbar .dropdown ul li {
-    min-width: 200px;
-  }
-  
-  .navbar .dropdown ul a {
-    padding: 10px 20px;
-    font-weight: 400;
-  }
-  
-  .navbar .dropdown ul a i {
-    font-size: 12px;
-  }
-  
-  .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-    color: #287094;
-  }
-  
-  .navbar .dropdown:hover > ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-  
-  .navbar .dropdown .dropdown ul {
-    top: 0;
-    left: calc(100% - 30px);
-    visibility: hidden;
-  }
-  
-  .navbar .dropdown .dropdown:hover > ul {
-    opacity: 1;
-    top: 0;
-    left: 100%;
-    visibility: visible;
-  }

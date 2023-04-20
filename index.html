@@ -13,30 +13,33 @@
   
     <!-- Main CSS File -->
     <link href="style.css" rel="stylesheet">
+
+    <!-- Main JavaScript File-->
+    <script src="main.js"></script>
   </head>
   <body>
     
-    <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center justify-content-between">
+    <header id="header">
+        <div>
     
-          <a href="index.html" class="logo"><img src="assets/logo.png" alt="" class="img-fluid"></a>
-    
+          <a href="index.html" class="logo"><img src="assets/logo.png" alt=""></a>
+          <!-- .navbar -->
           <nav id="navbar" class="navbar">
             <ul>
-              <li><a class="nav-link scrollto active" href="#main-image">Home</a></li>
-              <li><a class="nav-link scrollto" href="#about">About</a></li>
-              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+              <li><a href="#main-image">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav><!-- .navbar -->
+          </nav>
     
         </div>
       </header>
 
+      <!--Welcome-->
       <div id="main-image" class="home">
 
-        <div class="container">
-          <div class="image-content">
+        <div>
+          <div class="-content">
             <h1><span class="typed" data-typed-items="Mario Carbache, CS Student, Aspiring Software Engineer"></span></h1>
     
             <ul class="list-unstyled list-social">
@@ -47,8 +50,34 @@
           </div>
         </div>
       </div>
-
-       <!-- Main JavaScript File-->
-    <script src="main.js"></script>
-    
+      
+      <main>
+        <div id="about" class="paddsection">
+            <div class="container">
+              <div class="row justify-content-between">
+      
+                <div class="col-lg-4 ">
+                  <div class="div-img-bg">
+                    <div class="about-img">
+                      <img src="assets/me.jpg" class="img-responsive" alt="me">
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col-lg-7">
+                  <div class="about-descr">
+      
+                    <p class="p-heading">It's me, Mario!</p>
+                    <p class="separator">An ex sous-chef who after 8 years of experience in the restaurant industry decided to pursue his dream in tech.</p>
+                    <p class="separator">From a young age, I was always fascinated by the way computers and phones changed millions of people’s lives. I grew curious about how these devices worked and wanted to know what went on behind the scenes.</p>
+                    <p class="separator">Fast forward to today, I'm now following up on that aspiration. Upon obtaining my Associate Degree in Programming and Software Development at LaGuardia Community College, I transfered to John Jay College to pursue my Bachelor in Computer Science.</p>
+                    <p class="separator">I look forward to continue learning and growing as a software engineer and hope to one day contribute to this growing field.</p>
+      
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+      </main>
   </body>
