@@ -13,114 +13,88 @@
     <body>
         
         <header>
-
             <div class="navbar">
                 <ul class="links">
                     <li><a href="#aboutContainer">About</a></li>
                     <li><a href="#skillsContainer">Skills</a></li>
                     <li><a href="#contactContainer">Contact</a></li>
-                </ul>
-                
+                </ul> 
             </div>
-
         </header>
 
-        <div class="container" id="nameContainer">
-            <div class="hidden" id="card" >
-                <img src="/images/profile.png">
-            </div>
-
-            <div class="hidden" id="name">
-                Hello I'm Shawn Sinanan
-            </div>       
-        </div>
-
-        <div class="container" id="aboutContainer">
-            <div class="hidden" id="aboutMe">
-                 About Me
-            </div>
-        
+        <div class="pageGrid">
             
-            <!--
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="/images/2001.jpg"></div>
-                    <div class="swiper-slide"><img src="/images/enter_dragon.jpg"></div>
-                    <div class="swiper-slide"><img src="/images/goodfellas.jpg"></div>
+            <div class="container">
+                <div class="hidden" id="card" >
+                    <img src="/images/profile.png">
                 </div>
+            </div>
+
+            <div class="container">
+                <div class="hidden" id="name">
+                    Hello I'm Shawn Sinanan
+                </div>       
+            </div>
+
+            <div class="container fullrow" id="aboutContainer">
+                <div class="hidden" id="aboutMe">
+                    About Me
+                </div>
+            </div>    
         
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            -->
 
-        </div>    
+            <div class="container" id="skillsContainer">
+                <div class="hidden" id="skills">
+                    <div class="logo" id = "python">
+                        <img src="/images/python-logo-1.png">
+                    </div>
+                    <div class="logo" id="html">
+                        <img src="/images/HCJ.png" >
+                    </div> 
+                    <div class="logo" id="cplus">
+                        <img src="/images/c-logo.png" >
+                    </div> 
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="hidden" id="portfolio">
+                    <div class="linkCard">
+                        <div class="linkCard-preview">
+                            <img src="/images/GithubPreview.png">
+                        </div>
+                        <div class="linkCard-info">
+                            <a href="https://github.com/shawns21" target="_blank">Github</a>
+                        </div>
+                    </div>
+
+                    <div class="linkCard">
+                        <div class="linkCard-preview">
+                            <img src="/images/ResumePreview.png">
+                        </div>
+                        <div class="linkCard-info">
+                            <a href="https://docs.google.com/document/d/e/2PACX-1vRoMmq93HNf6KBnRr9d7I0-7FASa2Dm-u5VElQS0C3WLtwWYLUvtnFux49yqT5PStXxo-J5BCfprWgI/pub" target="_blank">Resume</a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container fullrow2" id="contactContainer">
+                <div class="hidden" id="contactIcons">
+                    <button onclick="LinkedinLink()">Linkedin</button>
+                </div>
+            
+                <div class="hidden" id="emailbox" >
+                    <a href="mailto:shawnsinanan21@gmail.com">Click here to send email </a>               
+                </div>
+            </div>
     
-
-        <div class="container" id="skillsContainer">
-            <div class="hidden" id="skills">
-                <div class="logo">
-                  <img src="/images/python.svg" alt="Python Logo">
-                </div>
-                 <div class="logo">
-                  <img src="/images/c++.png" alt="Python Logo">
-                </div>
-                 <div class="logo">
-                  <img src="/images/javascript-39396.png" alt="Python Logo">
-                 </div>
-                
-            </div>
-
-            <div class="hidden" id="portfolio">
-                <div class="linkCard">
-                    <div class="linkCard-preview">
-                        <img src="/images/GithubPreview.png" alt="Website Preview">
-                    </div>
-                    <div class="linkCard-info">
-                        <a href="https://github.com/shawns21" target="_blank">Github</a>
-                    </div>
-                </div>
-
-                <div class="linkCard">
-                    <div class="linkCard-preview">
-                        <img src="/images/ResumePreview.png" alt="Website Preview">
-                    </div>
-                    <div class="linkCard-info">
-                        <a href="https://docs.google.com/document/d/e/2PACX-1vRoMmq93HNf6KBnRr9d7I0-7FASa2Dm-u5VElQS0C3WLtwWYLUvtnFux49yqT5PStXxo-J5BCfprWgI/pub" target="_blank">Resume</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-       <div class="container" id="contactContainer">
-            <div class="hidden" id="contactIcons">
-                <button onclick="LinkedinLink()">Linkedin</button>
-            </div>
-            <div class="hidden" id="emailbox" >
-                <a href="mailto:shawnsinanan21@gmail.com">Click here to send email </a>               
-            </div>
         </div>
 
         <footer class="footer">
             Final
         </footer>
-    
-    
- <!--
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9.2.3/swiper-bundle.min.js"></script>
-    <script>
-        
-        const swiper = new Swiper('.swiper', {
-        loop: true,
-
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        });
-    </script>
-
--->
+     
     </body>
 </html>

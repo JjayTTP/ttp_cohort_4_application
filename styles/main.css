@@ -46,7 +46,7 @@ a:hover{
     height: 60px;
     position: fixed;
     margin: 0 auto;
-
+    z-index: 100;
 }
 
 .navbar .links{
@@ -56,131 +56,112 @@ a:hover{
     gap: 2rem;
 }
 
-/*ABOUT ME SECTION*/
+/*ABOUT ME SECTION (FIRST ROW)*/
+
+.pageGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
 
 .container{
-
-    width: 100vw;
-    height: 50vh;
-    background-color: var(--backcolor);
-    
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: #ccc;
+    padding: 20px;
     text-align: center;
+
 }
 
-#card{
-    width: 190px;
-    height: 254px;
-    background: rgb(236, 236, 236);
-    box-shadow: 10px 10px 20px #645757;
-    border-radius: 30px;
-    padding-bottom: 10px;
-}
 
-#card img{
-    max-width: 100%;
-    max-height: 100%;
+#card img {
+    width: 80%;
+    height: auto;
     border-radius: 50%;
-    margin-top: 5px;
-    margin-bottom: 30px;
-
+    border: 10px solid rgb(148, 34, 34);
+    transition-duration: 0.5s;
 }
 
-#card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    cursor: pointer;
-}
-
-#aboutMe{
-
-    width: 50%;
-    height: 100px;
-    padding: 60px;
-    font-size: xxx-large;
-    background-color: rgb(155, 90, 90);
-    
+#card:hover img {
+    transform: scale(1.1);
 }
 
 #name{
-    width: 50%;
-    height: 100px;
+    width: 75%;
+    height: 65%;
     padding: 60px;
     font-size: xxx-large;
     background-color: rgb(155, 90, 90);
-
 }
 
-/*
-
-.swiper{
-    width: 185px;
-    height: 250px;
-    background-color: blueviolet;
+#aboutMe{
+    width: 80%;
+    height: 75%;
+    padding: 60px;
+    font-size: xxx-large;
+    background-color: rgb(155, 90, 90);
+   
 }
 
-.swiper-slide img{
-    max-width: 100%;
-    max-height: 100%; 
+.fullrow{
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
 }
 
-.swiper-button-next, .swiper-button-prev {
-    position: absolute;
-    top: 50%;
-    width: calc(var(--swiper-navigation-size)/ 44 * 27);
-    height: var(--swiper-navigation-size);
-    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
-    z-index: 10;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--swiper-navigation-color,var(--swiper-theme-color));
-}
-
-*/
 
 #skills{
-
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     place-items: center;
 
 }
 
 .logo {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  position: relative;
-  padding: 5px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    position: relative;
+    padding: 10px;
 }
 
 .logo img {
-  width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  transition: transform 0.5s;
+    width: 100%;
+    max-height: 100%;
+    object-fit: scale-down;
+    transition: transform 0.5s;
 }
 
 .logo:hover img {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
+#python{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
 
+#html{
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+#cplus{
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+}
 
 #portfolio{
     display: flex;
     justify-content: space-between;
     align-items: center;
     
-    width: 35%;
+    width: 100%;
     height: 20rem;
     padding: 40px;
-    font-size: xxx-large;
     background-color: rgb(155, 90, 90);
 }
 
@@ -189,7 +170,7 @@ a:hover{
   max-width: 300px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   overflow: hidden;
   margin: 20px;
 }
@@ -201,16 +182,6 @@ a:hover{
   justify-content: center;
   position: relative;
   overflow: hidden;
-}
-
-.linkCard-preview:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
 }
 
 .linkCard-preview img {
@@ -234,16 +205,6 @@ a:hover{
   background-color: #fff;
 }
 
-.linkCard-info h2 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.linkCard-info p {
-  margin: 10px 0;
-  font-size: 14px;
-}
 
 .linkCard-info a {
   color: #fff;
@@ -268,8 +229,8 @@ a:hover{
     text-align: center;
     padding-top: 100px;
 
-}
- 
+} 
+
 #emailbox{
 
     width: 25%;
@@ -277,8 +238,12 @@ a:hover{
     background-color: aqua;
     text-align: center;
     padding-top: 100px;
-
 }  
+
+.fullrow2{
+    grid-row: 4 / 5;
+    grid-column: 1 / 3;
+}
 
 .footer{
     
