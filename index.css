@@ -1,0 +1,235 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Monteserrat', sans-serif;
+}
+
+/* navabr */
+
+/* sidebar */
+
+.sidebar {
+    width: 8rem;
+    height: 100%;
+    background-color: #eee;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.menu-icon {
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+.line {
+    height: .2rem;
+    width: 2.5rem;
+    background-color: #222;
+    margin-bottom: .6rem;
+}
+
+.line-1, .line-3 {
+    width: 1.8rem;
+    transition: all .4s;
+}
+
+.menu-icon:hover .line {
+    width: 2.5rem;
+}
+
+.social-icons-list {
+    list-style: none;
+    padding: 0; 
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-link {
+    font-size: 2rem;
+    color: #777;
+    transition: color .3s
+}
+
+.social-link:hover {
+    color: #deaa86;
+}
+
+.year {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #555;
+    font-family: 'Josefin Sans', sans-serif;
+}
+/* end of sidebar */
+
+/* navigation */
+
+.navigation {
+    /* fixed removes gap */
+    position: fixed;  
+    left: -32rem;
+    width: 40rem;
+    height: 100%;
+    background: rgba(1,0,1,.5);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: left .8s cubic-bezier(1,0,0,1);
+}
+
+.navigation-heading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 200;
+    letter-spacing: .2rem;
+    color: #B814B2;
+}
+
+
+.navigation-list {
+    list-style: none;
+    padding: 0;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-item {
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.navigation-link {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color .5s;
+}
+
+.navigation-link::before {
+    content: "";
+    width: 0rem;
+    height: .1rem;
+    background-color: #deaa86;
+    position: absolute;
+    top: 1rem;
+    left: -4rem;
+    transition: width .5s cubic-bezier(1,0,0,1);
+}
+
+.navigation-link::after {
+    content: "";
+    width: 0rem;
+    height: .1rem;
+    background-color: #deaa86;
+    position: absolute;
+    top: 1rem;
+    right: -4rem;
+    transition: width .5s cubic-bezier(1,0,0,1);
+} 
+
+.navigation-link:hover {
+    color: #86dede;
+}
+
+.navigation-link:hover::before,
+.navigation-link:hover::after {
+    width: 3rem;
+}
+
+.copyright {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.checkbox:checked ~ .navigation {
+    left: 8rem;
+}
+
+.checkbox:checked ~ .sidebar .line-1 {
+    transform: rotate(-405deg) translate(-10px,8px);
+    width: 2.5rem;
+}
+
+.checkbox:checked ~ .sidebar .line-2 {
+    opacity: 0;
+}
+
+.checkbox:checked ~ .sidebar .line-3 {
+    transform: rotate(405deg) translate(-10px,-8px);
+    width: 2.5rem;
+}
+
+/* end of navigation */
+
+/* header */
+.header {
+    margin-left: 8rem;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0,0,0,.6),rgba(0,0,0,.5)), url(./img/landscape.jpg) center no-repeat;
+    background-size: cover;
+
+}
+
+.brand-heading {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.7rem;
+    font-weight: 400;
+    color: #deaa86;
+    letter-spacing: .2rem;
+}
+
+.banner-heading {
+    color: #ddd;
+    height: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bh1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 7rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    animation: anim 2s;
+}
+
+.bh2 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 300px;
+    animation: anim 1.5s .5s backwards;
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* end of header */
+
+/* end of navbar */
