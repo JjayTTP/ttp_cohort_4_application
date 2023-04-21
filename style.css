@@ -123,34 +123,34 @@ body {
     width: 100%;
     height: auto;
     background: #ffffff;
-    padding-top: 120px;
+    padding-top: 130px;
   }
-  
-  #about .div-img-bg {
-    padding-bottom: 30px;
-    border: 20px solid #000000;
-  }
-  
+
   #about .div-img-bg .about-img img {
-    width: 100%;
+    width: 300px;
     box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
-    margin-top: -60px;
-    margin-left: 40px;
+    margin-top: -105px;
+    margin-left: 80px;
     height: 400px;
     -o-object-fit: cover;
     object-fit: cover;
+    border: 20px solid #000000;
+    float: left;
   }
   
-  #about .about-descr .p-heading {
+  .about-descr .p-heading {
+    padding-left: 450px;
     font-family: 'Playfair Display', serif;
     font-size: 28px;
-    text-align: left;
+    color: #000000;
   }
   
-  #about .about-descr .separator {
-    max-width: 80%;
+  .about-descr .separator {
+    font-size: 15px;
+    color: #000000;
+    padding-left: 450px;
+    max-width: 50%;
     margin-bottom: 0;
-    text-align: left;
   }
 
   
