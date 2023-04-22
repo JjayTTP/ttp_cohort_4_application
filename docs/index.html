@@ -3,28 +3,39 @@
   <script src="script.js"></script>
   <script src="https://kit.fontawesome.com/a0b551bf03.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
+
+  <form id="contact-form">
+  </form>
+  <div id="success-message"></div>
+  
   <script>
-    function init() {
-      var form = document.getElementById("contact-form");
-      form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://formspree.io/oliviaf7777@gmail.com", true);
-        xhr.setRequestHeader("Accept", "application/json");
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState !== XMLHttpRequest.DONE) return;
-          if (xhr.status === 200) {
-            form.reset();
-            alert("Thank you for your submission!");
-          } else {
-            alert("Oops! Something went wrong.");
-          }
-        };
-        xhr.send(new FormData(form));
+    const form = document.getElementById('contact-form');
+    const endpoint = 'https://formspree.io/f/mknakban';
+    const successMessage = document.getElementById('success-message');
+    
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const formData = new FormData(event.target);
+      fetch(endpoint, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          successMessage.textContent = 'Your message has been sent!';
+          form.reset();
+        } else {
+          throw new Error('Something went wrong.');
+        }
+      })
+      .catch(error => {
+        console.error(error);
       });
-    }
-    window.addEventListener("load", init);
-    </script>    
+    });
+  </script>  
   </head>
 
 <body>
