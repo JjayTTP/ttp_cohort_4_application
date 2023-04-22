@@ -17,16 +17,14 @@ function showNextImage() {
   }
   
   //responsive contact form that displays either success or error message
+  <script>
   const form = document.getElementById('contact-form');
   const endpoint = 'https://formspree.io/f/mknakban';
   const successMessage = document.getElementById('success-message');
-  
+
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
     fetch(endpoint, {
       method: 'POST',
       body: formData,
