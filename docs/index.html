@@ -3,42 +3,6 @@
   <script src="https://kit.fontawesome.com/a0b551bf03.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 
-  <form id="contact-form">
-    <input type="text" id="name" name="name" placeholder="Your name">
-    <input type="text" id="email" name="email" placeholder="Your Email">
-    <input type="text" id="message" name="message" placeholder="Write Your Message">
-  </form>
-  
-  <div id="success-message"></div>
-  
-  <script>
-    const form = document.getElementById('contact-form');
-    const endpoint = 'https://formspree.io/f/mknakban';
-    const successMessage = document.getElementById('success-message');
-    
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const formData = new FormData(event.target);
-      fetch(endpoint, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-      .then(response => {
-        if (response.ok) {
-          successMessage.textContent = 'Your message has been sent!';
-          form.reset();
-        } else {
-          throw new Error('Something went wrong.');
-        }
-      })
-      .catch(error => {
-        console.error(error);
-      });
-    });
-  </script>  
   </head>
 
 <body>
@@ -96,19 +60,18 @@
   </section>
   <!--contact page with contact form using formspree and hyperlinked icons from fontawesome-->
   <section id="Contact">
-          <title>Contact</title>
-   <div class="box">
-    <form id="contact-form">
-    <label>Name</label>
-    <input type="text" name="name">
-    <label>Email</label>
-    <input type="email" name="email">
-    <label>Message</label>
-    <textarea name="message"></textarea>
-    <button type="submit">Send</button>
-  </form>
-  <div id="success-message"></div>
-  <div id="success-message"></div>
+    <div class="box">
+      <form id="contact-form">
+        <label>Name</label>
+        <input type="text" name="name">
+        <label>Email</label>
+        <input type="email" name="email">
+        <label>Message</label>
+        <textarea name="message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div id="success-message"></div>
+    </div>
        <h1>Contact Me</h1>
        <p> Thank you for visiting my webpage! You can connect with me by clicking on the icons below or by using the contact form above to send a message to my email.</p>
   <ul>
