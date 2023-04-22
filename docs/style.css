@@ -171,25 +171,25 @@ button:active {
   letter-spacing: 3px;
   font-weight: 100;
 }
-.box ul{
-margin: 0;
-padding: 0;
-display: flex;
-justify-content: center;
+.box ul {
+  margin: 0;
+  padding: 0;
 }
 
-.box li{
-display: inline-block;
-margin: 0 10px;
-list-style: none;
+.box li {
+  display: inline-block;
+  margin: 6px;
+  list-style: none;
+  width: 40px; 
 }
-.box li a{
-display: inline-block;
-color: white;
-text-decoration: none;
-font-size: 60px;
-transition: all ease-in-out 250 ms;
+
+.box li a {
+  color: white;
+  text-decoration: none;
+  font-size: 60px;
+  transition: all ease-in-out 250 ms;
 }
-.box li a:hover{
-color: #b9b9b9;
+
+.box li a:hover {
+  color: #b9b9b9;
 }
