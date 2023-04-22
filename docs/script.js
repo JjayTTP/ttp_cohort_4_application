@@ -24,6 +24,9 @@ function showNextImage() {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
     fetch(endpoint, {
       method: 'POST',
       body: formData,
