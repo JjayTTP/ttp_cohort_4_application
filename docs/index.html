@@ -3,6 +3,28 @@
   <script src="script.js"></script>
   <script src="https://kit.fontawesome.com/a0b551bf03.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function init() {
+      var form = document.getElementById("contact-form");
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://formspree.io/oliviaf7777@gmail.com", true);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState !== XMLHttpRequest.DONE) return;
+          if (xhr.status === 200) {
+            form.reset();
+            alert("Thank you for your submission!");
+          } else {
+            alert("Oops! Something went wrong.");
+          }
+        };
+        xhr.send(new FormData(form));
+      });
+    }
+    window.addEventListener("load", init);
+    </script>    
   </head>
 
 <body>
