@@ -171,13 +171,16 @@ button:active {
   letter-spacing: 3px;
   font-weight: 100;
 }
-ul{
+.box ul{
 margin: 0;
 padding: 0;
+display: flex;
+justify-content: center;
 }
+
 .box li{
 display: inline-block;
-margin: 6px;
+margin: 0 10px;
 list-style: none;
 }
 .box li a{
