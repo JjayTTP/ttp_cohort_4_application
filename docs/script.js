@@ -18,7 +18,7 @@ function showNextImage() {
   
   //responsive contact form that displays either success or error message
   const form = document.getElementById('contact-form');
-  const endpoint = 'https://formspree.io/f/mknakban';
+  const endpoint = 'https://formspree.io/f/meqwvzon';
   const successMessage = document.getElementById('success-message');
   
   form.addEventListener('submit', (event) => {
