@@ -181,6 +181,7 @@ margin: 6px;
 list-style: none;
 }
 .box li a{
+display: inline-block;
 color: white;
 text-decoration: none;
 font-size: 60px;
