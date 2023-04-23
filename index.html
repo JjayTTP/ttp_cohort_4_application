@@ -4,83 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- need to add shortcut possibly a tag -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300&family=Jura:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300&family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6d47858bce.js" crossorigin="anonymous"></script>
     <title>ER</title>
 </head>
 <body>
 
-    <!-- navbar -->
+    <div class="mouse-circle"></div>
+    <div class="mouse-dot"></div>
 
-    <div class="navbar">
-        <!-- sidebar -->
+    <div class="container">
+        <div class="page-bg"></div>
+    </div>
 
-        <input type="checkbox" class="checkbox" id="click" hidden>
+    <!-- section 1 -->
+    <section class="section-1 center">
+        <!-- logo -->
+        <a href="#" class="logo">Eric Razor</a>
+        <!-- end of logo -->
 
-        <div class="sidebar">
-            <label for="click">
-                <div class="menu-icon">
-                    <div class="line line-1"></div>
-                    <div class="line line-2"></div>
-                    <div class="line line-3"></div>
-                </div>
-            </label>
+        <div class="circles">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+            <div class="circle circle-4"></div>
+        </div>
+        <div class="main-circle center">
+            <img src="./img/mountain.jpg" alt="sunset">
+        </div>
 
-            <ul class="social-icons-list">
-                <li>
-                    <a href="#" class="social-link">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="social-link">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-            </ul>
+        <h4 class="feature-text ft1">Software</h4>
+        <h4 class="feature-text ft2">Engineer</h4>
+    </section>
+    <!-- end of section 1 -->
 
-            <div class="year">
-                <p>2023</p>
+    <!-- section 2 -->
+
+    <section class="section-2">
+        <!-- section 2 heading -->
+        <h1 class="section-2-heading">About Me</h1>
+        <!-- end of section 2 heading -->
+
+        <!-- about me text -->
+        <p class="about-me-text"></p>
+        <!-- end of about me text -->
+    </section>
+
+    <section class="section-3">
+        <!-- section 3 heading -->
+        <h1 class="section-3-heading">Some tools i've worked with</h1>
+        <!-- end of section 3 heading -->
+
+        <!-- tools list -->
+        <div class="tools-worked-with center">
+            <div class="tool react-icon">
+                <i class="devicon-react-original-wordmark"></i>
+            </div>
+
+            <div class="tool js-icon">
+                <i class="devicon-javascript-plain"></i>
+            </div>
+
+            <div class="tool postgresql-icon">
+                <i class="devicon-postgresql-plain-wordmark"></i>
+            </div>
+
+            <div class="tool git-icon">
+                <i class="devicon-git-plain-wordmark"></i>
+            </div>
+
+            <div class="tool ruby-icon">
+                <i class="devicon-ruby-plain-wordmark"></i>
+            </div>
+
+            <div class="tool java-icon">
+                <i class="devicon-java-plain-wordmark"></i>
             </div>
         </div>
-        <!-- end of sidebar -->
+        <!-- end of tools list -->
+    </section>
+    <!-- end of section 2 -->
 
-        <nav class="navigation">
-            <div class="navigation-header">
-                <h1 class="navigation-heading">Razor </h1>
-            </div>
-
-            <ul class="navigation-list">
-                <li class="navigation-item">
-                    <a href="#" class="navigation-link">ME</a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#" class="navigation-link">SKILLS</a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#" class="navigation-link">CONTACT</a>
-                </li>
-
-                <div class="copyright">
-                    <p>&copy; 2023. Eric Razor. All rights reserved. &#128526;</p>
-                </div>
-            </ul>
-        </nav>
-    </div>
-    <!-- end of navbar -->
-
-    <header class="header">
-        <h3 class="brand-heading">Eric Razor </h3>
-
-        <div class="banner-heading">
-            <h1 class="bh1">Software engineer</h1>
-            <h1 class="bh2">Student for life</h1>
-        </div> 
-
-    </header>
-
+    
     <script src="script.js"></script> 
 </body>
 </html>

@@ -1,235 +1,302 @@
-html {
-    box-sizing: border-box;
-}
-
-body {
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Monteserrat', sans-serif;
-}
-
-/* navabr */
-
-/* sidebar */
-
-.sidebar {
-    width: 8rem;
-    height: 100%;
-    background-color: #eee;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10;
-}
-
-.menu-icon {
-    margin-top: 3rem;
-    cursor: pointer;
-}
-
-.line {
-    height: .2rem;
-    width: 2.5rem;
-    background-color: #222;
-    margin-bottom: .6rem;
-}
-
-.line-1, .line-3 {
-    width: 1.8rem;
-    transition: all .4s;
-}
-
-.menu-icon:hover .line {
-    width: 2.5rem;
-}
-
-.social-icons-list {
-    list-style: none;
-    padding: 0; 
-    height: 25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.social-link {
-    font-size: 2rem;
-    color: #777;
-    transition: color .3s
-}
-
-.social-link:hover {
-    color: #deaa86;
-}
-
-.year {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color: #555;
-    font-family: 'Josefin Sans', sans-serif;
-}
-/* end of sidebar */
-
-/* navigation */
-
-.navigation {
-    /* fixed removes gap */
-    position: fixed;  
-    left: -32rem;
-    width: 40rem;
-    height: 100%;
-    background: rgba(1,0,1,.5);
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    transition: left .8s cubic-bezier(1,0,0,1);
-}
-
-.navigation-heading {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 200;
-    letter-spacing: .2rem;
-    color: #B814B2;
-}
-
-
-.navigation-list {
-    list-style: none;
-    padding: 0;
-    height: 40rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navigation-item {
-    position: relative;
-    font-family: 'Josefin Sans', sans-serif;
-}
-.navigation-link {
-    color: white;
-    font-size: 1.6rem;
-    font-weight: 400;
-    letter-spacing: .1rem;
-    text-transform: uppercase;
+    box-sizing: border-box;
     text-decoration: none;
-    transition: color .5s;
+    list-style: none;
+    outline: none;
+    font-family: "Jura", sans-serif;
+    color: white;
 }
 
-.navigation-link::before {
-    content: "";
-    width: 0rem;
-    height: .1rem;
-    background-color: #deaa86;
-    position: absolute;
-    top: 1rem;
-    left: -4rem;
-    transition: width .5s cubic-bezier(1,0,0,1);
+html {
+    font-size: 62.5%;
 }
 
-.navigation-link::after {
-    content: "";
-    width: 0rem;
-    height: .1rem;
-    background-color: #deaa86;
-    position: absolute;
-    top: 1rem;
-    right: -4rem;
-    transition: width .5s cubic-bezier(1,0,0,1);
-} 
-
-.navigation-link:hover {
-    color: #86dede;
-}
-
-.navigation-link:hover::before,
-.navigation-link:hover::after {
-    width: 3rem;
-}
-
-.copyright {
-    color: #fff;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-.checkbox:checked ~ .navigation {
-    left: 8rem;
-}
-
-.checkbox:checked ~ .sidebar .line-1 {
-    transform: rotate(-405deg) translate(-10px,8px);
-    width: 2.5rem;
-}
-
-.checkbox:checked ~ .sidebar .line-2 {
-    opacity: 0;
-}
-
-.checkbox:checked ~ .sidebar .line-3 {
-    transform: rotate(405deg) translate(-10px,-8px);
-    width: 2.5rem;
-}
-
-/* end of navigation */
-
-/* header */
-.header {
-    margin-left: 8rem;
-    height: 100vh;
-    background: linear-gradient(to top, rgba(0,0,0,.6),rgba(0,0,0,.5)), url(./img/landscape.jpg) center no-repeat;
-    background-size: cover;
-
-}
-
-.brand-heading {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 2.7rem;
-    font-weight: 400;
-    color: #deaa86;
-    letter-spacing: .2rem;
-}
-
-.banner-heading {
-    color: #ddd;
-    height: 65rem;
+.center {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+/* mouse */
+.mouse-circle,
+.mouse-dot {
+    border-radius: 50%;
+    position: fixed;
+    z-index: 300;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mouse-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: brown;
+    animation: mouseDotAnimation 10s infinite linear;
+}
+
+.mouse-circle {
+    width: 6rem;
+    height: 6rem;
+    border: .1rem solid red;
+    animation: mouseCircleAnimation 10s infinite linear;
+}
+
+@keyframes mouseDotAnimation {
+    0% {
+        width: .5rem;
+        height: .5rem;
+    }
+    55% {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    100% {
+        width: .5rem;
+        height: .5rem;
+    }
+}
+
+@keyframes mouseCircleAnimation {
+    0% {
+        width: 6rem;
+        height: 6rem;
+    }
+    25% {
+        width: 8rem;
+        height: 8rem;
+    }
+    35% {
+        width: 4rem;
+        height: 4rem;
+    } 
+    70% {
+        width: 8rem;
+        height: 8rem;
+    }
+    100% {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+/* end of mouse */
+/* section 1 */
+.section-1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("./img/textile.jpg") center no-repeat;
+    background-size: cover;
+}
+.logo {
+    position: absolute;
+    top: 2rem;
+    left: 5rem;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: white;
+}
+/* circles */
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.circle {
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background-color: red;
+    align-self: center;
+    justify-self: center;
+    opacity: .5;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: left 2s, top 2s;
+}
+
+.circle-1 {
+    background: url("./img/wood.jpg") center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: .5rem dotted #a14b1a;
+    margin-left: -10rem;
+}
+
+.circle-2 {
+    background: url("./img/beach.jpg") center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: .5rem dotted #ffbd07;
+    margin-right: -10rem;
+}
+
+.circle-3 {
+    background: url("./img/raspberries.jpg") center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: 1rem double #9b0e0e;
+    margin-left: -10rem;
+}
+
+.circle-4 {
+    background: url("./img/multicolor.jpg") center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    border: .7rem double white;
+    margin-right: -10rem;
+}
+
+.main-circle {
+    width: 55rem;
+    height: 55rem;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: width .2s, height .2s;
+}
+
+.main-circle:hover {
+    width: 75rem;
+    height: 75rem;
+}
+
+.main-circle img {
+    mix-blend-mode:color-dodge;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: left 2s, top 2s;
+}
+
+/* end of circles */
+
+/* featured text */
+.feature-text {
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    width: 0;
+    word-wrap: break-word;
+    line-height: 3.5;
+    position: sticky;
+    top: 0;
+}
+
+.ft1 {
+    margin: 0 auto 0 10rem;
+}
+
+.ft2 {
+    margin: 0 10rem 0 auto;
+}
+/* end of featured text */
+/* end of section 1*/
+
+/* section 2 */
+.section-2 {
+    position: relative;
+    padding: 10rem 10rem 15rem 10rem;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("./img/textile.jpg") center no-repeat;
+    background-size: cover;
+}
+
+/* section 2 heading */
+.section-2-heading {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 10rem;
+    transform: translateY(-50%);
+    width: 0;
+    word-break: break-all;
+    line-height: 4;
+}
+/* end of section 2 heading */
+
+/* about me text */
+.about-me-text {
+    width: 80%;
+    margin: auto;
+}
+
+.about-me-text span {
+    font-family: "Poppins", sans-serif;
+    font-size: 10rem;
+    font-weight: lighter;
+    color: #aaa;
+    line-height: 1.5;
+    text-shadow: 0 0 1rem rgb(53, 175, 186)	;
+}
+
+@keyframes aboutMeTextAnimation {
+    0% {
+        color: #aaa;
+        top: 0;
+    }
+    10%,90% {
+        color: #fff;
+        top: 2rem;
+    }
+    100% {
+        color: #aaa;
+        top: 0;
+    }
+}
+/* end of about me text */
+/* end of section 2 */
+
+/* section 3 */
+.section-3 {
+    background: url("./img/watercolor.jpg");
+    width: 100%;
+    height: 100%;
+    padding: 20rem 0 10rem 0;
+    position: relative;
+}
+
+/* section 3 header */
+
+.section-3-heading {
+    display: flex;
+    font-size: 5rem;
     justify-content: center;
 }
 
-.bh1 {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 7rem;
-    font-weight: 400;
-    margin-bottom: 0;
-    animation: anim 2s;
+/* end of section 3 header */
+
+/* projects */
+.tools-worked-with {
+    flex-wrap: wrap;
+    padding-bottom: 15rem;
 }
 
-.bh2 {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 3.5rem;
-    font-weight: 300px;
-    animation: anim 1.5s .5s backwards;
+.tool {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30rem;
+    width: 40rem;
+    height: 45rem;
+    margin: 5rem;
+    
 }
+/* end of projects */
+/* end of section 3 */
 
-@keyframes anim {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-/* end of header */
+/* section 4 */
 
-/* end of navbar */
+/* end of section 4 */
