@@ -17,7 +17,7 @@
                 <ul class="links">
                     <li><a href="#aboutContainer">About</a></li>
                     <li><a href="#skillsContainer">Skills</a></li>
-                    <li><a href="#contactContainer">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul> 
             </div>
         </header>
@@ -71,7 +71,7 @@
             </div>
 
 
-            <div class="container fullrow2">
+            <div class="container contactContainer">
                 <div class="hidden" id="contact">
                     
                     <div class="portLinks" id="linkedin" data-url="https://www.linkedin.com/in/shawn-sinanan-073a111a4/">
@@ -79,22 +79,39 @@
                         <p>LinkedIn</p>
                     </div>
                     
-                    <div class="hidden" id="emailbox" >
-                        <form action="https://formsubmit.co/shawnsinanan21@gmail.com" method="POST">
-                            <input type="email" name="email" placeholder="Write Your Email Here"required>
-                            <input type="text" name="message" placeholder="Write Message Here" required>
-                            <button type="submit">Send</button>
+                    <div class="hidden" id="emailbox">
+                        <form onsubmit="sendEmail(); reset(); return false;">
+                            <input type="email" id="email" placeholder="Write Your Email Here"required>
+                            <input type="text" id="message" placeholder="Write Message Here" required>
+                            <button type="submit">Submit</button>
                         </form>
                     </div>
-                
-                </div>
+                </div>                
             </div>
-    
         </div>
 
         <footer class="footer">
             Final
         </footer>
-     
+        
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            
+            function sendEmail(){
+
+                let email = document.getElementById('email').value;
+                let message = document.getElementById('message').value;
+
+                Email.send({
+                    SecureToken : "e364c7f5-6dbe-491d-b724-71f2b8901dd4",
+                    To : 'shawnsinanan21@gmail.com',
+                    From : 'shawnsinanan21@gmail.com',
+                    Subject : "Portfolio Email",
+                    Body : "Email: " + email + "<br/>" + "Message: " + message
+                }).then(
+                message => alert(message)
+                );
+            }
+        </script>
     </body>
 </html>
