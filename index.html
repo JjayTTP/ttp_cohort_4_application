@@ -81,16 +81,14 @@
                     <div class="form">
                         <div class="title">Send an Email</div>
                         <div class="input-container ic1">
-                            <input id="email" class="input" type="text" placeholder=" " />
+                            <input id="email" class="input" type="email" placeholder="Email Address"required>
                             <div class="cut"></div>
-                            <label for="firstname" class="placeholder">Email Address</label>
                         </div>
                         <div class="input-container ic2">
-                            <input id="message" class="input" type="text" placeholder=" " />
+                            <input id="message" class="input" type="text" placeholder="Message">
                             <div class="cut cut-short"></div>
-                            <label for="message" class="placeholder">Message</label>
                         </div>
-                        <button type="text" class="submit">Submit</button>
+                        <button class="submitButton" onclick="sendEmail()">Submit</button>
                     </div>              
                 </div>
             </div>
@@ -115,7 +113,9 @@
                     From : 'shawnsinanan21@gmail.com',
                     Subject : "Portfolio Email",
                     Body : "Email: " + email + "<br/>" + "Message: " + message
-                })
+                }).then(
+                message => alert(message)
+                );
             }
         </script>
     </body>
