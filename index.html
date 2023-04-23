@@ -73,12 +73,13 @@
 
             <div class="container contactContainer">
                 <div class="hidden" id="contact"> 
+                    
                     <div class="portLinks" id="linkedin" data-url="https://www.linkedin.com/in/shawn-sinanan-073a111a4/">
                         <img src="/images/linkedin.png">
                         <p>LinkedIn</p>
                     </div>
 
-                    <div class="form">
+                    <div class="form1" id="messageForm">
                         <div class="title">Send an Email</div>
                         <div class="input-container ic1">
                             <input id="email" class="input" type="email" placeholder="Email Address"required>
@@ -88,8 +89,13 @@
                             <input id="message" class="input" type="text" placeholder="Message">
                             <div class="cut cut-short"></div>
                         </div>
-                        <button class="submitButton" onclick="sendEmail()">Submit</button>
+                        <button class="submitButton" id="emailSubmit" onclick="sendEmail()">Submit</button>
                     </div>              
+                    
+                    <div class="form2" id="thankPage" style="display:none">
+                         <div class="thanks">Thanks for Submitting</div>
+                    </div>
+
                 </div>
             </div>
 
@@ -116,6 +122,15 @@
                 }).then(
                 message => alert(message)
                 );
+
+                var messageForm = document.getElementById("messageForm"); 
+                var thankPage = document.getElementById("thankPage");
+
+                messageForm.style.display = (
+                    messageForm.style.display == "none" ? "block" : "none"); 
+                
+                thankPage.style.display = (
+                    thankPage.style.display == "none" ? "block" : "none"); 
             }
         </script>
     </body>
