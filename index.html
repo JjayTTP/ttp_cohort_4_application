@@ -20,8 +20,27 @@
         <div class="page-bg"></div>
     </div>
 
+
+    <!-- navigation -->
+    <!-- menu icon -->
+    <div class="menu-icon center">
+        <div class="menu-icon-line"></div>
+        <div class="menu-icon-line"></div>
+    </div>
+    <!-- end of menu icon -->
+    <!-- navbar -->
+    <nav class="navbar">
+        <a href="#section-1" class="navbar-link">HOME</a>
+        <a href="#section-2" class="navbar-link">ME</a>
+        <a href="#section-3" class="navbar-link">SKILLS</a>
+        <a href="#section-4" class="navbar-link">CONTACT</a>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- end of navigation -->
+
     <!-- section 1 -->
-    <section class="section-1 center">
+    <section class="section-1 center" id="section-1">
         <!-- logo -->
         <a href="#" class="logo">Eric Razor</a>
         <!-- end of logo -->
@@ -43,7 +62,7 @@
 
     <!-- section 2 -->
 
-    <section class="section-2">
+    <section class="section-2" id="section-2">
         <!-- section 2 heading -->
         <h1 class="section-2-heading">About Me</h1>
         <!-- end of section 2 heading -->
@@ -53,9 +72,9 @@
         <!-- end of about me text -->
     </section>
 
-    <section class="section-3">
+    <section class="section-3" id="section-3">
         <!-- section 3 heading -->
-        <h1 class="section-3-heading">Some tools i've worked with</h1>
+        <h1 class="section-3-heading">Some tools i've worked with:</h1>
         <!-- end of section 3 heading -->
 
         <!-- tools list -->
@@ -86,9 +105,71 @@
         </div>
         <!-- end of tools list -->
     </section>
-    <!-- end of section 2 -->
+    <!-- end of section 3 -->
 
-    
+    <!-- section 4  -->
+    <section class="section-4 center" id="section-4">
+        <!-- section 4 heading -->
+        <h1 class="section-4-heading">Contact Me</h1>
+        <!-- end of section 4 heading -->
+
+        <!-- form -->
+        <div class="form-wrapper">
+            <h2 class="form-heading">Let's Talk</h2>
+            <form class="contact-form center">
+                <input 
+                    type="text" 
+                    class="contact-form-input" 
+                    placeholder="Name" 
+                    id="name"
+                    autocomplete="off"
+                />
+                <p class="message">Error Message</p>
+                <input 
+                    type="text" 
+                    class="contact-form-input" 
+                    placeholder="Email" 
+                    id="email"
+                    autocomplete="off"
+                />
+                <p class="message">Error Message</p>
+                <input 
+                    type="text" 
+                    class="contact-form-input" 
+                    placeholder="Subject" 
+                    id="subject"
+                    autocomplete="off"
+                />
+                <p class="message">Error Message</p>
+                <textarea 
+                    class="contact-form-input contact-form-textarea" 
+                    placeholder="Message..." 
+                    id="message"
+                    autocomplete="off"
+                ></textarea>
+                <p class="message">Error Message</p>
+                <input 
+                    type="submit" 
+                    class="form-submit-btn" 
+                    value="Send Message"
+                />
+            </form>
+        </div>
+        <!-- end of form -->
+
+        <!-- social media icons -->
+        <div class="slideshow">
+            <a href="https://www.linkedin.com/in/eric-r-960b87110/" class="slideshow-link">
+                <i class="devicon-linkedin-plain"></i>
+            </a>
+            <a href="https://github.com/eric-razor" class="slideshow-link">
+                <i class="devicon-github-original-wordmark"></i>
+            </a>
+            <a href="mailto:eric.razorjr@gmail.com" class="slideshow-link slideshow-email">Send email</a>
+        </div>
+        <!-- end of social media icons -->
+    </section>
+    <!-- end of section 4 -->
     <script src="script.js"></script> 
 </body>
 </html>
