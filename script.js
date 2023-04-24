@@ -51,7 +51,6 @@ const animateCircles = (evt, x, y) => {
     mX = evt.clientX;
     mY = evt.clientY;
 }
-
 // end of animated circles
 
 document.body.addEventListener("mousemove", (e) => {
@@ -87,9 +86,7 @@ menuIcon.addEventListener("click", () => {
     menuIcon.classList.remove("show-menu-icon");
     navbar.classList.remove("hide-navbar");
 })
-
 // end of navigation
-
 
 // about me text
 const aboutMeText = document.querySelector('.about-me-text');
@@ -105,8 +102,6 @@ const aboutMeTextContent = "I am a web developer based in NY. A student for life
     })
  });
 // end of about me text
-
-
 // section 4
 
 // form 
@@ -185,7 +180,5 @@ form.addEventListener("submit", evt => {
     checkEmail(email);
     checkRequiredFields([username, email,subject, message]);
 })
-
 // end of form validation
-
 // end of section 4
