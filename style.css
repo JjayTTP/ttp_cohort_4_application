@@ -84,7 +84,7 @@ body {
     width: 100%;
   }
   
-  #home .content {
+  #home .home-content {
     height: 100vh;
     text-align: left;
     width: 100%;
@@ -93,7 +93,7 @@ body {
     flex-direction: column;
   }
   
-  .content h1 {
+  .home-content h1 {
     font-size: 25px;
     font-weight: 700;
     margin-bottom: 10px;
@@ -169,13 +169,13 @@ body {
   }
 
   h2 {
+    padding-bottom: 20px;
     margin: 0;
     color: #000000;
     text-transform: uppercase;
     letter-spacing: 0.4em;
     font-size: 24px;
     font-weight: 500;
-    text-align: center;
   }
   
   .icons {
@@ -183,6 +183,63 @@ body {
     padding-top: 50px;
     padding-left: 100px;
   }
+
+  /*Portfolio*/
+  #portfolio {
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 50px;
+  }
+
+  #portfolio img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 20%;
+  }
+  .example {
+    position: relative;
+    left: 35%;
+    padding: 0;
+    width: 350px;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .content {
+    opacity: 0;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000000;
+    background-color: #ffff;
+    width: 350px;
+    height: 300px;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    text-align: center;
+    border-radius: 20%;
+  }
+  .example .content:hover {
+    opacity: .7;
+  }
+  .example .content .text {
+    height: 0;
+    opacity: .1;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+  }
+  .example .content:hover .text {
+    opacity: 1;
+    transform: translateY(250px);
+    -webkit-transform: translateY(250px);
+  }
+
 
 
   /*Contacts*/
@@ -199,6 +256,7 @@ body {
     letter-spacing: 0.2em;
     font-size: 20px;
     font-weight: 400;
+    text-align: center;
   }
   
   .contact-details {
