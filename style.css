@@ -1,0 +1,305 @@
+/*General CSS*/
+body {
+    background: #000000;
+    color: #287094;
+    font-family: 'Poppins', helvetica;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /*Header*/
+  #header {
+    overflow: hidden;
+    position: fixed;
+    top: -70px;
+    width: 100%;
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  #header .logo a {
+    color: #5f5f5f;
+  }
+  
+  #header .logo img {
+    max-height: 40px;
+    float: left;
+    padding-left: 10px;
+  }
+
+  #header ul{
+    float: right;
+  }
+
+  .navbar {
+    padding: 0;
+  }
+
+  .navbar a{
+    text-decoration: none;
+  }
+  
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar li {
+    position: relative;
+  }
+  
+  .navbar a, .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px 10px 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #5f5f5f;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+  
+  .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+    color: #287094;
+  }
+  
+  /*Home*/
+  #home {
+    background: url("assets/NewYorkAtNight.jpeg") repeat scroll center center/cover;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  #home .home-content {
+    height: 100vh;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .home-content h1 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  
+  ul.list-social{
+    list-style-type: none;
+    color: #ffff;
+  }
+
+  ul.list-social li {
+    float: left;
+    margin-right: 25px;
+  }
+  
+  ul.list-social li a img.icon {
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
+  }
+
+  ul.list-social li a img.icon:hover{
+    background-color: #00aaff;
+    border-radius: 30%;
+    transform: scale(1.5);
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  /*About*/
+  #about {
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    padding-top: 130px;
+  }
+
+  #about .div-img-bg .about-img img {
+    width: 300px;
+    box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+    margin-top: -105px;
+    margin-left: 80px;
+    height: 400px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border: 20px solid #000000;
+    float: left;
+  }
+  
+  .about-descr .p-heading {
+    padding-left: 450px;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #000000;
+  }
+  
+  .about-descr .separator {
+    font-size: 15px;
+    color: #000000;
+    padding-left: 450px;
+    max-width: 50%;
+    margin-bottom: 0;
+  }
+
+  /*Languages*/
+  #languages {
+    background: #ffffff;
+    position: relative;
+    padding-bottom: 80px;
+    padding-top: 50px;
+  }
+
+  h2 {
+    padding-bottom: 20px;
+    margin: 0;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .icons {
+    max-height: 130px;
+    padding-top: 50px;
+    padding-left: 100px;
+  }
+
+  /*Portfolio*/
+  #portfolio {
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 50px;
+  }
+
+  #portfolio img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 20%;
+  }
+  .example {
+    position: relative;
+    left: 36%;
+    padding: 0;
+    width: 350px;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .content {
+    padding-top: 30px;
+    opacity: 0;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000000;
+    background-color: #ffff;
+    width: 350px;
+    height: 300px;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    text-align: center;
+    border-radius: 10%;
+  }
+  .example .content:hover {
+    opacity: 1;
+  }
+  .example .content .text {
+    height: 0;
+    opacity: .1;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+  }
+  .example .content:hover .text {
+    opacity: 1;
+    transform: translateY(250px);
+    -webkit-transform: translateY(250px);
+  }
+
+
+
+  /*Contacts*/
+  #contact {
+    background-color: #000000;
+    height: auto;
+    width: 100%;
+  }
+
+  h2{
+    padding-top: 30px;
+    color: #287094;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .contact-details {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contact-details li {
+    padding-bottom: 10px;
+  }
+
+  li.contact.center{
+    padding-left: 35%;
+  }
+
+  li.contact{
+    text-align: center;
+    font-size: 15px;
+    color: #287094;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    background: transparent;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  #contact .socials-media ul li {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+    float: none;
+    display: inline-block;
+  }
+  
+  .socials-media ul li a img:hover {
+    background-color: #00aaff;
+    border-radius: 30%;
+    transform: scale(1.5);
+    transition: all 0.5s ease-in-out 0s;
+  }
+
+  
+  
