@@ -356,10 +356,9 @@ a:hover{
 }
 
 .footer{
-    height: 100px;
+    height: 120px;
+    width: 100%;
     background-color: #303245;
-    display: flex;
-    justify-content: center;
 }
 
 .icon{
