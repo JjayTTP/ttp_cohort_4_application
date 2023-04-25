@@ -23,22 +23,26 @@
         </header>
 
         <div class="pageGrid">
-            
-            <div class="container">
-                <div class="hidden" id="card" >
-                    <img src="/images/profile.png">
-                </div>
-            </div>
 
-            <div class="container">
-                <div class="hidden" id="name">
-                    Hello I'm Shawn Sinanan
+            <div class="container firRow">
+                <div class="hidden" id="intro">
+                    <div class="name">
+                        Shawn Sinanan
+                        <p>Fulltime Student at John Jay College of Criminal Justice</p>
+                        <img src="/images/johnjay.png">
+                    </div>
+                    <img src="/images/profile.png">
                 </div>       
             </div>
 
             <div class="container fullrow" id="aboutContainer">
                 <div class="hidden" id="aboutMe">
-                    About Me
+                    <div class="bio">
+                       Hello, I'm a college sophomore studying computer science at John Jay College. I was born in Queens, but my parents are from Trinidad and Tobago. I enjoy going to the gym and collecting VHS tapes of my favorite old movies. Through my website portfolio, I hope to showcase my technical skills and connect with others in the tech community.
+                    </div>
+                    <div class="poster">
+                        Here are some of my favorite movie posters.
+                    </div>
                 </div>
             </div>    
         
@@ -83,11 +87,9 @@
                         <div class="title">Send an Email</div>
                         <div class="input-container ic1">
                             <input id="email" class="input" type="email" placeholder="Email Address"required>
-                            <div class="cut"></div>
                         </div>
                         <div class="input-container ic2">
                             <input id="message" class="input" type="text" placeholder="Message">
-                            <div class="cut cut-short"></div>
                         </div>
                         <button class="submitButton" id="emailSubmit" onclick="sendEmail()">Submit</button>
                     </div>              
@@ -119,9 +121,7 @@
                     From : 'shawnsinanan21@gmail.com',
                     Subject : "Portfolio Email",
                     Body : "Email: " + email + "<br/>" + "Message: " + message
-                }).then(
-                message => alert(message)
-                );
+                })
 
                 var messageForm = document.getElementById("messageForm"); 
                 var thankPage = document.getElementById("thankPage");
