@@ -30,19 +30,27 @@ const swiper = new Swiper('.swiper', {
   direction: 'vertical',
   loop: true,
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
 });
+
+const swipe = document.getElementById('swipers');
+
+const hiddenTop = document.getElementById('top')
+const hiddenBot = document.getElementById('bot')
+
+swipe.addEventListener('mouseover', function handleMouseOver() {
+    hiddenTop.style.display = null;
+    hiddenBot.style.display = null;
+});
+
+swipe.addEventListener('mouseout', function handleMouseOut() {
+    hiddenTop.style.display = 'none'; 
+    hiddenBot.style.display = 'none';
+});
+
+
