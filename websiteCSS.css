@@ -1,0 +1,246 @@
+.navBar{
+    display:grid;
+    align-items: right;
+    position:fixed;
+    top:0;
+    width:100%;
+    background-color: transparent;
+    grid-template-columns: 9% auto auto 9% 9% 9%;
+}
+
+.navBar a{
+    text-align: center;
+    text-decoration: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin:0;
+    border: 1px solid red;
+    border-style: solid solid solid solid;
+    background-color: white;
+    color:black;
+    font-size:120%;
+}
+
+.navBar a:hover{
+    background-color: red;
+    color: white;
+}
+
+.navItem1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.navItem2{
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.navItem3{
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+
+.navItem4{
+    grid-column-start: 6;
+    grid-column-end: 7;
+}
+
+body {
+    margin:0;
+}
+
+h1 {
+    text-align: center;
+    width:auto;
+    color:blue; 
+    background-color:aqua;
+    font-size:400%;
+    width: 100%;
+    border-top: 170px solid aqua;
+    border-bottom: 200px solid aqua;
+    padding-bottom: 100px;
+    margin:0;
+}
+
+h2 {
+    text-align:center;
+    font-size:300%;
+}
+
+.subhead1 {
+    color:red;
+    background-color: yellow; 
+    margin:0;
+}
+
+.subhead2 {
+    padding-top: 50px;
+    padding-bottom:100px;
+    color:deeppink;
+    margin:0;
+    background-color: aquamarine;
+    font-family:'Franklin Gothic Medium';
+}
+
+.subhead3 {
+    padding-top:50px;
+    color:rgb(148, 40, 40);
+    background-color: rgb(16, 226, 33);
+    margin:0;
+    font-family:Cambria;
+}
+.aboutMeP {
+    padding-bottom: 100px;
+    border-top:100px solid yellow;
+    width: 100%;
+    margin:auto;
+    background-color: yellow;
+}
+
+.aboutMeP p {
+    text-align:justify;
+    font-family: 'Trebuchet MS';
+    color: green;
+    font-size: 200%;
+    width: 30%;
+    margin: auto;
+}
+
+.aboutMeSec2 {
+    display:grid;
+    column-gap: 0px;
+    grid-template-columns: 25% 25% 25% 25% ;
+    grid-template-rows: 500px;
+    background-color: brown;
+}
+
+.aboutMeSec2p{
+    text-align: center;
+    font-size: 170%;
+    font-family: Arial;
+    color: purple;
+    background-color: darksalmon;
+}
+
+.aboutMeSec2p span{
+    display:block;
+    text-align: justify;
+    font-size: 90%;
+    color:brown;
+    margin: 20px 20px 20px 20px;
+
+}
+
+.aboutMeSec2 div img {
+    width: 100%;
+    height: 100%;
+}
+
+.aboutMeItem1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: darksalmon;
+}
+
+.aboutMeItem2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.aboutMeItem3 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.aboutMeItem4 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: darksalmon;
+}
+
+.grid2 {
+    display:grid;
+    column-gap: 10%;
+    grid-template-columns: 75px auto auto auto 75px;
+    grid-template-rows: auto;
+    background-color: aquamarine;
+    padding-bottom: 150px;;
+    font-family:'Courier New';
+    color:indigo
+}
+
+.grid2 .item1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;
+    font-size: 200%;
+    
+}
+
+.grid2 .item2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    text-align: center;
+    font-size: 200%;
+}
+
+.grid2 .item3 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    text-align: center;
+    font-size: 200%;
+}
+
+.grid2 div p{
+    font-size:80%;
+    text-align: justify;
+}
+
+.grid2 div p button {
+    font-size:80%;
+    color:indigo;
+    border: 2px solid rgb(24, 221, 221);
+    background-color:rgb(26, 240, 240);
+}
+
+.grid2 div p button:hover {
+    background-color: rgb(24, 221, 221);
+}
+
+
+.flex{
+    display:flex;
+    flex-direction:row;
+    padding-top:150px;
+    padding-bottom:300px;
+    justify-content:space-evenly;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(16, 226, 33);
+}
+
+.flex div {
+    font-size: 230%;
+    text-align:justify;
+    color:rgb(148, 40, 40);
+}
+
+.flex div a {
+    text-decoration: none;
+    color:rgb(148, 40, 40);
+    border: 2px solid rgb(44, 180, 44);
+    background-color: rgb(47, 202, 47);
+}
+
+.flex div a:hover {
+    background-color:rgb(44, 180, 44);
+}
+
+.end {
+    padding-bottom:300px;
+    font-size:230%;
+    font-family:Cambria;
+    text-align: center;
+    background-color: rgb(16, 226, 33);
+    color:rgb(148, 40, 40);
+}
