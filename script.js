@@ -3,8 +3,7 @@ function testResults (form) {
     var user = form.name.value;
     var email = form.email.value;
     var subject= form.subject.value;
-    var text = form.text.value;
-    
+    var text = form.text.value; 
     window.location.href = `mailto:sean.cedano@jjay.cuny.edu?&subject=${user} - ${subject}&body=${text}\n\nContact Email:${email}` ;
 }
 
