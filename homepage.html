@@ -1,0 +1,121 @@
+<!DOCTYPE html5>
+<html>
+<head>
+  <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="/assets/css/fontawesome.css" rel="stylesheet">
+    <link href="/assets/css/brands.css" rel="stylesheet">
+    <link href="/assets/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+<body>
+  <div>
+      <div class ="navbar">
+        <ul>
+            <p>SC</p>
+            <li><a href="#home"><i class="fa-solid fa-address-card"></i>Contact</a></li>
+            <li><a href="https://drive.google.com/file/d/1W0eKaw8k6m9IxERU6zc35cXo3echJ9R9/view?usp=share_link"><i class="fa-solid fa-file"></i>Resume</a></li>
+            <li><a href="#projects"><i class="fa-solid fa-chart-line"></i>Projects</a></li>
+            <li><a href="#skills"><i class="fa-solid fa-code"></i>Skills</a></li>
+            <li><a href="#about"><i class="fa-solid fa-user"></i>About</a></li>
+
+        </ul>
+      </div> 
+
+
+
+    <div  class="container">
+        <div class="picture">
+          <br>
+          <img src="assets/pictures/profile_picture.jpg" width="300" height="300"> 
+          <p>Sean Cedano</p>
+        </div>
+    </div>
+
+    <div id="about">
+      <div  class="tab">
+        <h2 >About</h2>
+      </div>
+      <p id="bio" style="line-height: 2";>
+        Hey! Thank you for taking an interest in my portfolio. To provide some insight, I have an associate's computer science from Laguardia community college,
+         I am currently pursuing my bachelor's in computer science information security along with a minor in Cyber Crime. I'm very passionate about technology,
+          I enjoy the creativity of being able to create things that others find useful or can benefit from. 
+        <span id="state"></span><span id="more"> 
+        I've been programming since I was 15, my first programming language was Python. After writing my first script and seeing the computer follow my intstructions I fell in love with the art of programming.
+        Although, at times it was demotivating not catching onto certain concepts immediatly I'd say one of my biggest skills is not giving up. After learning the basic concepts of Python and it's limitations I caught an interest in languages like C++ because of the low-level
+         memory access. Ever since then, I've started learning more about C++! I enjoy investigating the latest vulnerability threats in technology, another thing I really enjoy is reading non-fiction. Overall, One thing I would say about myself is I love learning new things and I'm always open to new oppurtunities!
+      </span></p>
+
+      <button onclick="readMore()" id="read-more-btn">
+        <i class="fa-solid fa-angle-down"></i>
+      </button>
+
+    </div>
+
+    <div id="skills" class="container-skills">
+      <div class="tab">
+        <h2>languages and tools I'm familiar with</h2>
+      </div>
+      <br>
+      <div class="skillset-img">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
+        &nbsp;
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" />
+        &nbsp;
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" />
+        &nbsp;
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
+        &nbsp;
+        <img src="https://pbs.twimg.com/profile_images/1301882562323927042/gc1CWg37_400x400.jpg" />
+      </div>
+  
+    </div>
+
+    <div id="projects" class="container-skills">
+      <div class="tab">
+        <h2>projects</h2>
+      </div>
+
+      <div class="flex-container">
+        <div class="flex-item">
+          <p class="title">Huffman Coding</p>
+          <img src="https://user-images.githubusercontent.com/43622167/232914027-6ee31960-d045-4eb8-b3ab-fafb9f361486.png" alt="Image 1">
+          <div class="overlay"></div>
+          <a href="https://github.com/SeanDeveloper/Huffman-Encoding-Project"><button class="button">Github</button></a>
+        </div>
+        <div class="flex-item">
+          <p class="title">Tech Scholars Program </p>
+          <img src="assets/pictures/project_picture.PNG" alt="Image 2">
+          <div class="overlay"></div>
+          <a href="https://github.com/SeanDeveloper/TechScholars-Group-1"><button class="button">Github</button></a>
+        </div>
+      </div>
+      
+
+      <div class="tab">
+      <h2>get in contact</h2>
+      </div>
+      
+      <div class="contact-box">
+      <form class="contact" name="myForm" action="" method="GET">
+        <input type="text" id="name" class="input-field" placeholder="Your Name"><br>
+        <input type="email" id="email" class="input-field" placeholder="Your Email" > <br>
+        <input type="text" id="subject" class="input-field" placeholder="Subject"> <br>
+        <textarea type="text" id="text" class="input-field textarea-field" placeholder="Your message"> 
+        </textarea> <br>
+        <button type="submit" onclick="testResults(this.form)" class="btn">Send Message</button>
+        </form>
+      <div>
+    </div>
+    </div>
+
+      <div class="connections">
+        <div>
+        <ul>
+          <li><a href="https://github.com/SeanDeveloper"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /></a></li>
+          <li><a href="https://www.linkedin.com/in/sean-cedano/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" /></a></li>
+        </ul>
+      </div>
+      </div>
+</body>
+</html>
