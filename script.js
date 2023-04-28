@@ -1,5 +1,5 @@
 
-function testResults (form) {
+function email (form) {
     var user = form.name.value;
     var email = form.email.value;
     var subject= form.subject.value;
