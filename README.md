@@ -46,6 +46,8 @@ Note: Remember to git add, git commit and git push regularly
 2. I can see a picture of you.
 3. I can read a short description of you.
 
+<img src='https://i.imgur.com/xElg7tj.gif' title='About' width='' alt='Video Walkthrough' />
+
 <h2> As a user, I can see how to contact or follow you. </h2>
 
 ### Acceptance criteria
@@ -54,6 +56,8 @@ Note: Remember to git add, git commit and git push regularly
 2. I can click a link to visit your GitHub page.
 3. I can click a link to visit your LinkedIn page.
 
+<img src='https://i.imgur.com/FDYECaN.gif' title='Links' width='' alt='Video Walkthrough' />
+
 <h2> As a user, I can navigate your site. </h2>
 
 ### Acceptance criteria
@@ -61,12 +65,16 @@ Note: Remember to git add, git commit and git push regularly
 1. There is a navigation UI that has links to all of the pages or sections.
 2. When I click on a link in the navigation UI, I can view that page/section.
 
+<img src='https://i.imgur.com/tby3EMh.gif' title='UI' width='' alt='Video Walkthrough' />
+
 <h2> As a user, I can experience an interactive UI. </h2>
 
 <h3> Acceptance criteria </h3>
 
 1. I can change the content or appearance of the site when I click or interact with elements on the page.
 2. Errors do not appear in the browser console when I use an interactive element.
+
+<img src='https://i.imgur.com/MAr0DAo.gif' title='Click changes' width='' alt='Video Walkthrough' />
 
 <h1> Requirements </h1>
 Make sure you do the following to successfully complete the projec:
