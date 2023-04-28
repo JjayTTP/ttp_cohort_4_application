@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b0115bff85.js" crossorigin="anonymous"></script>
+    <title>Jimmy Palafox Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                 <img src="images/logo.png" class="logo" alt="logo">
+                 <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                 </ul>
+            </nav>
+            <div class="header-text">
+                <p>Developer</p>
+                <h2>Hi, I'm <span>Jimmy Palafox</span></h2>
+            </div>
+        </div>
+    </div>
+        
+
+<!-- --------------------- about --------------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/me.png" >
+                </div>
+                <div class="about-col-2">
+                    <h2 class="sub-title">About Me</h2>
+                    <p>I am a first gen college student, aspiring software engineer, and I am from NYC. I like puzzles and playing video games. I like to be outside and get fresh air, rain or sunshine.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>DSA</span><br>Data Structures and Algorithms</li>
+                            <li><span>Web Development</span><br>Building websites</li>
+                            <li><span>App Development</span><br>Building iOS apps</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>IT Tech</span><br>NYC DOE</li>
+                            <li><span>Server</span><br>225 Fifth Ave</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>John Jay College of Criminal Justice</span><br>Computer Science and Information Security</li>
+                            <li><span>Borough of Manhattan Community College</span><br>Computer Science</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- --------------------- contact --------------------- -->
+
+    <div class="contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left"></div>
+                    <h2 class="sub-title">Contact Me</h2>
+                    <div class="social-icons">
+                        <a href="mailto:jimmy.palafox@jjay.cuny.edu" text-decoration="none"><i class="fa-regular fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/jimmy-palafox-618016237/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/hazedCadet/ttp_cohort_4_application"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                <div class="contact-right"></div>
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+<script type="text/javascript">
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+</body>
+</html>
