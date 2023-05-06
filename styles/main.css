@@ -382,6 +382,10 @@ a:hover{
   height: 100px;
 }
 
+.ic2 .input{
+    resize: none;
+}
+
 .input {
   background-color: #303245;
   border-radius: 12px;
