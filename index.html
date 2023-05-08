@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="styles/main.css">
+        <title>Shawn Sinanan Website</title>
+        <script defer src="js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+        
+        <header>
+            <div class="navbar">
+                <ul class="links">
+                    <li><a href="#aboutContainer">About</a></li>
+                    <li><a href="#skillsContainer">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul> 
+            </div>
+        </header>
+
+        <div class="pageGrid">
+
+            <div class="container firRow">
+                <div class="hidden" id="intro">
+                    <div class="name">
+                        Shawn Sinanan
+                        <p>Fulltime Student at John Jay College of Criminal Justice</p>
+                        <img src="/images/johnjay.png">
+                    </div>
+                </div>
+                <div class="hidden" id="picture">
+                    <img src="/images/profile.png" style="border-radius: 10%">
+                </div>      
+            </div>
+
+            <div class="container" id="aboutContainer">
+                <div class="hidden" id="aboutMe">
+                    <div class="bio">
+                       Hello, I'm a college sophomore studying Computer Science at John Jay College. I was born in Queens, but my parents are from Trinidad and Tobago. I enjoy going to the gym and collecting VHS tapes of my favorite old movies. Through my website portfolio, I hope to showcase my technical skills and connect with others in the tech community.
+                    </div> 
+                </div>
+            </div>
+            <div class="container" id="posterContainer">
+                <div class="swiper" id="swipers">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/images/2001.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/goodfellas.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/enter_dragon.jpg">
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev navBtn" id="top"></div>
+                    <div class="swiper-button-next navBtn" id="bot"></div>
+                </div>
+                <div class="postertitle">Here are some of my favorite movie posters.</div>
+            </div>
+                                
+
+            <div class="container" id="skillsContainer">
+                <div class="hidden" id="skills">
+                    <div class="gridTitle">Skills</div>
+                    <div class="logo" id = "html">
+                        <img src="/images/html-1.svg">
+                    </div>
+                    <div class="logo" id = "css">
+                        <img src="/images/CSS3_logo.svg.png">
+                    </div>
+                    <div class="logo" id = "javascript">
+                        <img src="/images/javascript-1.svg">
+                    </div>
+                    <div class="logo" id="python">
+                        <img src="/images/9591ed82caa8d20c30db96cb7298d3a9.png">
+                    </div> 
+                    <div class="logo" id="cplus">
+                        <img src="/images/c-logo.png" >
+                    </div> 
+                </div>
+            </div>
+
+            <div class="container" id="portfolioContainer">
+                <div class="hidden" id="portfolio">
+                    <div class="portLinks" id="github" data-url="https://github.com/shawns21">
+                        <img src="/images/2080299.png">
+                        <p>GitHub</p>
+                    </div>
+                </div>
+                <div class="hidden" id="portfolio2">
+                    <div class="portLinks" id="resume" data-url="https://docs.google.com/document/d/e/2PACX-1vRoMmq93HNf6KBnRr9d7I0-7FASa2Dm-u5VElQS0C3WLtwWYLUvtnFux49yqT5PStXxo-J5BCfprWgI/pub">
+                        <img src="/images/Google_Drive_icon_(2020).png">
+                        <p>Resume</p>
+                    </div>
+                </div> 
+            </div>
+
+
+            <div class="container" id="contactContainer">
+                <div class="hidden" id="linked"> 
+                    <div class="portLinks" id="linkedin" data-url="https://www.linkedin.com/in/shawn-sinanan-073a111a4/">
+                        <img src="/images/linkedin.png">
+                        <p>LinkedIn</p>
+                    </div>
+                </div>
+
+                <div class="hidden" id="contact"> 
+                    <div class="form1" id="messageForm">
+                        <div class="title">Send an Email</div>
+                        <div class="input-container ic1">
+                            <input id="email" class="input" type="email" placeholder="Email Address"required>
+                        </div>
+                        <div class="input-container ic2">
+                            <textarea id="message" class="input" placeholder="Message"></textarea>
+                        </div>
+                        <button class="submitButton" id="emailSubmit" onclick="sendEmail()">Submit</button>
+                    </div>              
+                    
+                    <div class="form2" id="thankPage" style="display:none">
+                         <div class="thanks">Thanks for Submitting</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            <div class="icon">
+                <a href="https://www.linkedin.com/in/shawn-sinanan-073a111a4/"><img src="/images/linkedinicon.svg"></a> 
+                <a href="https://github.com/shawns21"><img src="/images/square-github.svg"></a>
+            </div> 
+        </footer>
+        
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            
+            function sendEmail(){
+
+                let email = document.getElementById('email').value;
+                let message = document.getElementById('message').value;
+
+                Email.send({
+                    SecureToken : "e364c7f5-6dbe-491d-b724-71f2b8901dd4",
+                    To : 'shawnsinanan21@gmail.com',
+                    From : 'shawnsinanan21@gmail.com',
+                    Subject : "Portfolio Email",
+                    Body : "Email: " + email + "<br/>" + "Message: " + message
+                })
+
+                var messageForm = document.getElementById("messageForm"); 
+                var thankPage = document.getElementById("thankPage");
+
+                messageForm.style.display = (
+                    messageForm.style.display == "none" ? "block" : "none"); 
+                
+                thankPage.style.display = (
+                    thankPage.style.display == "none" ? "block" : "none"); 
+            }
+        </script>
+    </body>
+</html>
