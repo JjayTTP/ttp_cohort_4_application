@@ -1,0 +1,69 @@
+.container.experience__container {
+    width: 40%;
+    padding-bottom: 4rem;
+    transition: var(--transition);
+}
+
+.container.experience__container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);
+    border-radius: 1%;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.experience {
+    /* background: var(--color-primary-variant); */
+    /* height: auto; */
+    text-align: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    user-select: none;
+}
+
+
+.skill__level {
+    color: var(--color-light);
+    font-weight: 300;
+    display: block;
+    width: 80%;
+    margin: 0.8rem auto 0;
+}
+
+.experience__icon {
+    width: 40%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+}
+
+img {
+    border-radius: 20px;
+    /* justify-content: baseline;
+    max-width: fit-content; */
+    background: transparent;
+}
+
+
+/* ================ MEDIA QUERIES (MEDIUM DEVICES) =========== */
+@media screen and (max-width: 1024px){
+    .container.experience__container {
+        width: 60%;
+    }
+}
+
+/* ================ SMALL QUERIES (MEDIUM DEVICES) =========== */
+@media screen and (max-width: 600px){
+    .container.experience__container {
+        width: var(--container-wigth-sm);
+    }
+
+    .skill__level {
+        width: var(--container-wigth-sm);
+    }
+
+}
