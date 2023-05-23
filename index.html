@@ -38,62 +38,63 @@
 	</div>
 	<!-----------about------------>
 	<div id="about">
-	<div class="container">
-		<div class="coloumn">
-			<div class="about-col-1">
-				<img src="images/3.png"
-			</div>
-			<div class="about-col-2">
-				<h1 class="sub-title">
-					About me
-				</h1>
-				<p>
-					I am a passionate Computer Science student who always seeks to learn more and explore new things. 
-					I have a great passion for programming and penetration testing using it to solve
-					problems, that is why I was seeking to learn the tools that enable me to create more 
-					solutions, so I learned the tools that help me create web and mobile applications.
-					I use my skills in programing to get the job done with the highest possible quality.</p>
-				<div class="tab-titles">
-					<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-					<p class="tab-links" onclick="opentab('projects')">Projects</p>
-					<p class="tab-links" onclick="opentab('education')">Education</p>
+		<div class="container">
+			<div class="coloumn">
+				<div class="about-col-1">
+					<img src="images/3.png"
+				</div>
+				<div class="about-col-2">
+					<h1 class="sub-title">
+						About me
+					</h1>
+					<p>
+						I am a passionate Computer Science student who always seeks to learn more and explore new things.
+						I have a great passion for programming and penetration testing using it to solve
+						problems, that is why I was seeking to learn the tools that enable me to create more
+						solutions, so I learned the tools that help me create web and mobile applications.
+						I use my skills in programing to get the job done with the highest possible quality.
+					</p>
+					<div class="tab-titles">
+						<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+						<p class="tab-links" onclick="opentab('projects')">Projects</p>
+						<p class="tab-links" onclick="opentab('education')">Education</p>
 
-					<div>
-						<div class="tab-contents active-tab" id="skills">
-							<ul>
-								<li><span>Software Development:</span><br>Python,HTML,CSS,C++,Dart,Flutter,C#,<br>.NET MAUI, OOP, Data Structure</li>
-								<li><span>CyberSecurity:</span><br>Basic Pentration Testing,vulnerability assessment of networks,<br>Network Scanning,Nmap,Burpsuite,Metatsploit,<br>Basic information gathering and reconnaissance,Basic knowledge of Cryptography</li>
+						<div>
+							<div class="tab-contents active-tab" id="skills">
+								<ul>
+									<li><span>Software Development:</span><br>Python,HTML,CSS,C++,Dart,Flutter,C#,<br>.NET MAUI, OOP, Data Structure</li>
+									<li><span>CyberSecurity:</span><br>Basic Pentration Testing,vulnerability assessment of networks,<br>Network Scanning,Nmap,Burpsuite,Metatsploit,<br>Basic information gathering and reconnaissance,Basic knowledge of Cryptography</li>
 
-							</ul>
+								</ul>
+
+							</div>
+							<div class="tab-contents" id="projects">
+								<ul>
+									<li><span>Weather App:</span><br>Dart, Flutter, API</li>
+									<li><span>News App:</span><br>.Net Maui, c#, API</li>
+									<li><span>Store App:</span><br>Dart, Flutter, Postman</li>
+									<li><span>Student Chatting App:</span><br>Flutter, Firebase, Dart</li>
+								</ul>
+
+							</div>
+							<div class="tab-contents" id="education">
+								<ul>
+									<li><span>JJAY College 2022-2024:</span><br>Computer Science and Information Security</li>
+
+								</ul>
+
+							</div>
 
 						</div>
-						<div class="tab-contents" id="projects">
-							<ul>
-								<li><span>Weather App:</span><br>Dart, Flutter, API</li>
-								<li><span>News App:</span><br>.Net Maui, c#, API</li>
-								<li><span>Store App:</span><br>Dart, Flutter, Postman</li>
-								<li><span>Student Chatting App:</span><br>Flutter, Firebase, Dart</li>
-							</ul>
 
-						</div>
-						<div class="tab-contents" id="education">
-							<ul>
-								<li><span>JJAY College 2022-2024:</span><br>Computer Science and Information Security</li>
-
-							</ul>
-
-						</div>
 
 					</div>
-
 
 				</div>
 
 			</div>
 
 		</div>
-
-	</div>
 
 
 	</div>
@@ -112,7 +113,7 @@
 							It’s a Flutter App Written in Dart Language. Firebase was used in this app for authentication  sign in, sign up so that every user can have a different experience and for the communication between students in the chatting.
 						</p>
 					</div>
-					
+
 				</div>
 				<div class="work">
 					<img src="images/3.jpg" />
@@ -166,12 +167,15 @@
 					<a href="resume.docx" class="btn btn2">Download Resume</a>
 				</div>
 				<div class="contact-right">
-					<form >
+					<form name="submit-to-google-sheet">
 						<input type="text" name="Name" placeholder="Your Name" required />
-						<input type="email" name="email" placeholder="Your Email" required />
+						<input type="email" name="Email" placeholder="Your Email" required />
 						<textarea name="Message" rows="6" placeholder="Enter Your Message Please"></textarea>
 						<button type="submit" class="btn btn2">Submit</button>
 					</form>
+					<span id="msg">
+						
+					</span>
 				</div>
 			</div>
 		</div>
@@ -179,20 +183,32 @@
 
 	</div>
 	<script>
-        var tablinks = document.getElementsByClassName("tab-links");
+		var tablinks = document.getElementsByClassName("tab-links");
 		var tabcontents = document.getElementsByClassName("tab-contents");
 
 		function opentab(tabname) {
-			for(tablink of tablinks){
-                tablink.classList.remove("active-link");
+			for (tablink of tablinks) {
+				tablink.classList.remove("active-link");
 			}
 			for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
+				tabcontent.classList.remove("active-tab");
 			}
 			event.currentTarget.classList.add("active-link");
 			document.getElementById(tabname).classList.add("active-tab");
-        }
+		}
 
+	</script>
+	<script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbypLszFOVVMtbC846PnZtDpJ2ebUPLde6d4CCGaFN1zEttkgtNSvOU4V71c97-IgCVZww/exec'
+		const form = document.forms['submit-to-google-sheet']
+		const msg = document.getElementById("msg")
+
+		form.addEventListener('submit', e => {
+			e.preventDefault()
+			fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+				.then(response => )
+				.catch(error => console.error('Error!', error.message))
+		})
 	</script>
 
 </body>
