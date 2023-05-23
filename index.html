@@ -38,7 +38,7 @@
 	<!-----------about------------>
 	<div id="about">
 	<div class="container">
-		<div class="row">
+		<div class="coloumn">
 			<div class="about-col-1">
 				<img src="images/3.png"
 			</div>
@@ -53,9 +53,37 @@
 					solutions, so I learned the tools that help me create web and mobile applications.
 					I use my skills in programing to get the job done with the highest possible quality.</p>
 				<div class="tab-titles">
-					<p class="tab-links active-link">Skills</p>
-					<p class="tab-links">projects</p>
-					<p class="tab-links">Education</p>
+					<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+					<p class="tab-links" onclick="opentab('projects')">Projects</p>
+					<p class="tab-links" onclick="opentab('education')">Education</p>
+
+					<div>
+						<div class="tab-contents active-tab" id="skills">
+							<ul>
+								<li><span>Software Development:</span><br>Python,HTML,CSS,C++,Dart,Flutter,C#,<br>.NET MAUI, OOP, Data Structure</li>
+								<li><span>CyberSecurity:</span><br>Basic Pentration Testing,vulnerability assessment of networks,<br>Network Scanning,Nmap,Burpsuite,Metatsploit,<br>Basic information gathering and reconnaissance,Basic knowledge of Cryptography</li>
+
+							</ul>
+
+						</div>
+						<div class="tab-contents" id="projects">
+							<ul>
+								<li><span>Weather App:</span><br>Dart, Flutter, API</li>
+								<li><span>News App:</span><br>.Net Maui, c#, API</li>
+								<li><span>Store App:</span><br>Dart, Flutter, Postman</li>
+								<li><span>Student Chatting App:</span><br>Flutter, Firebase, Dart</li>
+							</ul>
+
+						</div>
+						<div class="tab-contents" id="education">
+							<ul>
+								<li><span>JJAY College 2022-2024:</span><br>Computer Science and Information Security</li>
+
+							</ul>
+
+						</div>
+
+					</div>
 
 
 				</div>
@@ -68,6 +96,100 @@
 
 
 	</div>
+	<!-----------------portfolio---------->
+	<div id="portfolio">
+		<div class="container">
+			<h1 class="sub-title"> My Projects</h1>
+			<div class="work-list">
+				<div class="work">
+					<img src="images/2.jpg" />
+					<div class="layer">
+						<h3>
+							Chatting App
+						</h3>
+						<p>
+							It’s a Flutter App Written in Dart Language. Firebase was used in this app for authentication  sign in, sign up so that every user can have a different experience and for the communication between students in the chatting.
+						</p>
+					</div>
+					
+				</div>
+				<div class="work">
+					<img src="images/3.jpg" />
+					<div class="layer">
+						<h3>
+							Weather App
+						</h3>
+						<p>
+							In this app I used Flutter and Dart, it relies on API to search for the weather data for a specific city and then we display this data on the home page.
+						</p>
+					</div>
+				</div>
+				<div class="work">
+					<img src="images/4.png" />
+					<div class="layer">
+						<h3>
+							News App
+						</h3>
+						<p>
+							In this app I used .NET MAUI Framework and C# and I also worked with the API to get the data from an online Database, and I divided the app into different categories in order to display News in different pages for each category.
+						</p>
+					</div>
+				</div>
+				<div class="work">
+					<img src="images/5.png" />
+					<div class="layer">
+						<h3>
+							Store App
+						</h3>
+						<p>
+							In this App i used Flutter as a framework for developing the App relying on Dart Language and using the Postman tool to do the requests such as the Get and the Put requests.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!--------------------contact--------------->
+	<div id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="contact-left">
+					<h1 class="sub-title">Contact Me</h1>
+					<p><i class="fas fa-envelope"></i> Yahmedgk11@gmail.com</p>
+					<p><i class="fas fa-phone"></i> (347)-589-3847</p>
+					<div class="social-icons">
+						<a href="https://www.linkedin.com/in/youssef-elgendy-625732244/"><i class="fab fa-linkedin"></i></a>
+						<a href="https://github.com/yelgendy12"><i class="fab fa-github"></i></a>
+					</div>
+				</div>
+				<div class="contact-right">
+					<form >
+						<input type="text" name="Name" placeholder="Your Name" required />
+						<input type="email" name="email" placeholder="Your Email" required />
+						<textarea name="Message" rows="6" placeholder="Enter Your Message Please"></textarea>
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+        var tablinks = document.getElementsByClassName("tab-links");
+		var tabcontents = document.getElementsByClassName("tab-contents");
+
+		function opentab(tabname) {
+			for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+			}
+			for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+			}
+			event.currentTarget.classList.add("active-link");
+			document.getElementById(tabname).classList.add("active-tab");
+        }
+
+	</script>
 
 </body>
 
