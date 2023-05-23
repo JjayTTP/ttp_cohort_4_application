@@ -267,8 +267,8 @@ form .btn2{
 }
 /*-----------------css for mobile------------*/
 @media only screen and (max-width: 600px){
-	#header{
-		background-image: url(images/71.png)
+	#header {
+		background-image: url(images/3.png)
 	}
 	.header-text{
 		margin: 100%;
