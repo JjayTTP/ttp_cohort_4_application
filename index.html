@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="HTML, CSS">
+        <meta name="description" content="A landing page for a few ideas and discoveries in IT and software.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css" media="all">
+        <title>Zhigang Hao</title>
+    </head>
+    <body>
+        <header>
+            <!-- Navigation buttons -->
+            <div class="navbar">
+                <ul>
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="about.html">About</a>
+                    <a href="https://docs.google.com/document/d/1IHDdYSGMT4RAzU4SINI3ymN6H5juA1aX/edit?usp=sharing&ouid=104029329947909401709&rtpof=true&sd=true">Resume</a>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <h1>Hi. My name is Zhigang Hao.</h1>
+            <h2 id="vterm-title">Here is a simple virtual terminal. Type a command and press the "Enter" key or click the button.</h2>
+            <div class="virtual-terminal">
+                <input id="textbox" placeholder="Type command"><button onclick="exec()" id="btn1">Enter</button>
+            </div>
+            <h2 id="vterm-title">Some commands you can type are "help", "ls", and "clear". <br>
+                More commands will be added soon.
+            </h2>
+        </main>
+        <footer>
+            <!-- Social Media buttons -->
+            <div class="social-links">
+                <ul>
+                    <a href="https://www.linkedin.com/in/zhigang-hao-9952a1183/"><i class="fab fa-linkedin"></i>Linkedin</a>
+                    <a href="https://github.com"><i class="fab fa-github"></i>Github</a>
+                    <a href="mailto:zhigang017@gmail.com"><i class="fas fa-envelope-square"></i>Email</a>
+                </ul>
+            </div>
+            <!-- Show Copyright info -->
+            <p>Zhigang Hao &copy; 2023</p>
+        </footer>
+        <script src="terminal.js"></script>
+    </body>
+</html>

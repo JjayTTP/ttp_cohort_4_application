@@ -1,6 +1,6 @@
-# ttp_cohort_4_application
-Students will be submitting this project as a qualifier for the 2023 cohort for the Tech Talent Pipeline. 
-All applicants must submit a completed project in order to be considered for the program. Those who successfully complete this project will move on to the final assessment.
+# 2022TTP-Application-Project
+Students will be submitting this project as a qualifier for the 2022 cohort for the Tech Talent Pipeline. 
+All applicants must submit a completed project in order to be considered for the program. Those who successfully complete this project will move on to the last and final part of the application process, the interview process.
 
 # Introduction
 For this project you will build your own personal website using the following criteria:
@@ -16,6 +16,8 @@ For now, this project will be an MVP (Minimum Viable Product) that you can conti
 
 # Examples
 Below are some sample websites. These may be a lot more intricate with a lot more elements than what is expected for. These are here to give you ideas on how to move forward. You do not need to copy any specific feature here. You can and should use your own creativity!
+
+[Fakhreddine Chaabani (he/him)](http://fakhreddinechaabani.com/)
 
 [Carlos Martinez (he/him)](https://carlosmartinez.dev/)
 
