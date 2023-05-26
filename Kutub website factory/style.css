@@ -1,6 +1,10 @@
 body {
 
-  background-color: gray;
+  :root{
+      --bg-color:#1f242d;
+      --secong-bg-color:#323946;
+      --text-color:#fff;
+  }
 
 
 
