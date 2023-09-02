@@ -112,8 +112,13 @@ embed {
   padding: 10px;
 }
 
+#Projects {
+  text-align: center;
+}
+
 /* contact page CSS */
 body{
+  text-align: center;
   margin: 0;
   padding: 0;
   background: rgb(255,182,193);
@@ -179,10 +184,11 @@ button:active {
 }
 
 .icon-container i {
-  font-size: 4em;
+  font-size: 2em;
   margin: 0 1em;
 }
 
 .box li a:hover {
   color: #b9b9b9;
 }
+
